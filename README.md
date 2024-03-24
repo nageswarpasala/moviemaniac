@@ -8,4 +8,4 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
 
-In order to run this app without any errors, need to provide the api key in the file MovieList.jsx. Once can obtain the key from TMDB official website after registration.
+In order to run this app without any errors, need to provide the api key in the file **MovieList.jsx**. Once can obtain the key from TMDB official website after registration.
