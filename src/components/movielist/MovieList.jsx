@@ -19,13 +19,17 @@ const MovieList = ({ type, emoji, icon }) => {
   }, []);
 
   useEffect(() => {
-    const sortedMovies = _.orderBy(filteredMovies, [sort.by], [sort.order]);
-    setFilteredMovies(sortedMovies);
+    if (sort.by === "default") {
+      setFilteredMovies(movies);
+    } else {
+      const sortedMovies = _.orderBy(filteredMovies, [sort.by], [sort.order]);
+      setFilteredMovies(sortedMovies);
+    }
   }, [sort]);
 
   const fetchMovies = async () => {
     const response = await fetch(
-      `https://api.themoviedb.org/3/movie/${type}?api_key=<provide api key>`
+      `https://api.themoviedb.org/3/movie/${type}?api_key=<provide your api key>`
     );
     const data = await response.json();
     setMovies(data.results);
